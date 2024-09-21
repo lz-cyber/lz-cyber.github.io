@@ -53,28 +53,28 @@
 {
 }
 console.log("cpu从1数到1亿："+(new Date()-timer)+"ms!")
-let strCET6='';
-let arrCET6=[];
-fetch('cet6.txt')
-.then(res=>res.txt())
-.then(txt=>{
-strCET6=txt;
-arrCET6=strCET6.split('\r\n');
-let rand=Math.floor(arrCET6.lenrth*Math.random());
-let cetWord=arrCET6[rand];
-let begin=cetWord.indexof('\t');
-let end=cetWord.lastIndexof('\t');
-let word=cetWord.slice(0,begin);
-let pron=cetWord.slice(begin+1,end);
-let chinese=cetWord.slice(end+1);
-select('#word').textContent=word;
-select('#pron').textContent=pron;
-select('#chinese').textContent=chinese; 
-});
+ let strCET6 = '' ;
+   let arrCET6 = [] ;
+   fetch('cet6.txt')
+   .then(res => res.text())
+   .then(txt => {
+                 strCET6 = txt ;
+                 arrCET6 =  strCET6.split('\r\n') ;
+                 let rand = Math.floor(arrCET6.length * Math.random() ) ;
+                 let cetWord = arrCET6[rand] ;
+                 let begin = cetWord.indexOf('\t') ;
+                 let end =  cetWord.lastIndexOf('\t') ;
+                 let word = cetWord.slice(0,begin) ;
+                 let pron = cetWord.slice(begin+1,end) ;
+                 let chinese = cetWord.slice(end+1) ;
+                    select('#word').textContent = word ;
+                    select('#pron').textContent = pron ;
+                    select('#chinese').textContent =chinese ;
+                }) ;
 function select(str){
-    let dom=document.querySelector(str);return dom;
-}
-
+    let dom = document.querySelector(str);
+    return dom ;
+   }
 </script>
 </body>
 </html>
