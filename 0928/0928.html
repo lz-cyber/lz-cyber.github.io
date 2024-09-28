@@ -46,19 +46,18 @@
     }
     </style>
     <script>
-      let Model={};
-      Model.cet6String='';
-      Model.CET6=[];
-      Model.cetUrl=['0928/cet6.1.txt','0928/cet6.2.txt','0928/cet6.3.txt'];
-      for(let i=0;i<Model.cetUrl.length;i++){
-        fetch(Model.cetUrl[i])
-        .then(res=>res.text())
-        .then(txt=>{
-            Model.cet6String+=txt;
-            UI.log('单词库:'+Model.cetUrl[i]+'加载成功！')
-        });
-
-      }
+       let Model = {} ;
+        Model.cet6String = '' ;
+        Model.CET6 = [] ;
+        Model.cetUrl = ['cet/cet1.txt','cet/cet2.txt','cet/cet3.txt'];
+        for(let i=0; i<Model.cetUrl.length; i++){
+            fetch(Model.cetUrl[i])
+            .then(res => res.text())
+            .then(txt => {
+                Model.cet6String += txt ;
+                UI.log('单词库：' + Model.cetUrl[i] + ' 加载成功!') ;       
+            });
+          } ;
     </script>
 </head>
 <body>
@@ -78,7 +77,7 @@
 江西科技师范大学，李贞
 </footer>
 <script>
-let UI = {} ;
+     let UI = {} ;
       UI.log = function(s){
       select('footer').textContent = s ;
       } ;
@@ -106,10 +105,10 @@ let UI = {} ;
         }
         
       } ;
-function select(str){
-    let dom=document.querySelector(str);return dom;
-}
-
-</script>
+     function select(selector){
+        let dom = document.querySelector(selector) ;
+        return dom ;
+      }
+    </script>
 </body>
 </html>
