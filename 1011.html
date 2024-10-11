@@ -62,7 +62,7 @@
                 word.cn=wordArr[2];
                 Model.CET6.push(word);            
          }
-        };//局部代码块结束
+        }//局部代码块结束
     </script>
 </head>
 <body>
@@ -95,7 +95,7 @@
        }
        select('button#randWord').onclick=function(){
         let  CET6=Model.CET6;
-        let rand=math.floor(Math.random()*CET6.length);
+        let rand=Math.floor(Math.random()*CET6.length);
         let word=CET6[rand];
         UI.printWord(word);
        };
