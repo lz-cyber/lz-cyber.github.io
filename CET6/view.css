@@ -14,17 +14,17 @@
     height: 15% ;
     position: relative;
        }
-    nav{ height: 6% ;
+    nav{ height: 8% ;
         background-color: rgb(159, 163, 221);}
     nav button{
      font-size: 1em;
        }
     button.small{
-     width: 20%;
+     width: 30%;
      padding: 0.1em 0.2em; 
      }
     button.big{
-     width: 15%;
+     width: 30%;
      padding: 0.1em 0.5em; 
      }
     main{
